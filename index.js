@@ -102,6 +102,6 @@ app.use((err, req, res, next) => {
 })
 
 // 開啟伺服器
-app.listen(3000, () => {
-    console.log('Server open on port 3000!');
+app.listen(process.env.PORT, () => {
+    console.log(`Server open on port ${process.env.PORT}`);
 })
