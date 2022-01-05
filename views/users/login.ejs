@@ -1,0 +1,33 @@
+<% layout('layouts/template') %>
+
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="card shadow">
+                    <img src=" https://imgur.dcard.tw/oSHMOip.jpg" alt="..." class="card-img-top">
+                    <div class="card-body m-0 p-2">
+                        <form action="/login" method="post" novalidate class="to-be-validated">
+                            <div class="mb-2">
+                                <label for="username" class="form-label">帳號:</label>
+                                <input type="text" id="username" name='username' class="form-control" required
+                                    autofocus>
+                                <div class="valid-feedback">
+                                    看起來不錯！
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label for="password" class="form-label">密碼:</label>
+                                <input type="text" id="password" name='password' class="form-control" required>
+                                <div class="valid-feedback">
+                                    看起來不錯！
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-success">登入</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

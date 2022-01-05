@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">私藏台灣美食地圖</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/restaurants/">All restaurants</a>
+                <a class="nav-link" href="/restaurants/new">Add restaurant</a>
+            </div>
+            <% if(!user){ %>
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="/register">註冊</a>
+                    <a class="nav-link" href="/login">登入</a>
+                </div>
+
+                <% }else{ %>
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" href="/logout">登出</a>
+                    </div>
+                    <% } %>
+        </div>
+
+    </div>
+</nav>

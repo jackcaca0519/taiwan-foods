@@ -1,0 +1,49 @@
+<% layout('layouts/template') %>
+    <div class="row">
+        <h1 class="text-center">Edit Restaurant</h1>
+        <div class="col-md-6 offset-md-3">
+            <a href="/restaurants/<%= rest._id%>">Back to restaurant</a>
+            <form action="/restaurants/<%= rest._id %>?_method=patch" method="post" novalidate class="to-be-validated"
+                enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">餐廳名:</label>
+                    <input type="text" id="title" name='restaurant[title]' class="form-control"
+                        value="<%= rest.title %>" required>
+                </div>
+                <div class=" mb-3">
+                    <label for="Location" class="form-label">地址:</label>
+                    <input type="text" id="Location" name="restaurant[location]" class="form-control"
+                        value="<%= rest.location %>" required>
+                </div>
+                <div class=" mb-3">
+                    <label for="price" class="form-label">價位:</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" aria-label="price" id="price"
+                            name="restaurant[avgPrice]" value="<%= rest.avgPrice %>" required>
+                    </div>
+                </div>
+                <div class=" mb-3">
+                    <label for="descript" class="form-label">評論:</label>
+                    <textarea type="text" id="descript" name="restaurant[description]"
+                        class="form-control"> <%= rest.description %></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="img" class="form-label">新增圖片:</label>
+                    <input type="file" name="image" class="form-control" multiple id="img">
+                </div>
+                <div class="mb-3">
+                    <% rest.images.forEach((img,i)=>{ %>
+                        <img src="<%= img.thumbnail %>" class="img-thumbnail">
+                        <div class="form-check-inline">
+                            <input type="checkbox" id="image-<%= i %>" name="deleteImg[]" value="<%= img.filename %>">
+                        </div>
+                        <label for="image-<%= i %>">刪除</label>
+                        <% }) %>
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-info px-4">save</button>
+                </div>
+            </form>
+        </div>
+    </div>

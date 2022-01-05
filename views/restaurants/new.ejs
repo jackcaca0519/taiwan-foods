@@ -1,0 +1,45 @@
+<% layout('layouts/template') %>
+    <div class="row">
+        <h1 class="text-center">New Restaurant</h1>
+        <div class="col-md-6 offset-md-3">
+            <form action="/restaurants" method="post" novalidate class="to-be-validated" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="title" class="form-label">餐廳名:</label>
+                    <input type="text" id="title" name='restaurant[title]' class="form-control" required>
+                    <div class="valid-feedback">
+                        看起來不錯！
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="Location" class="form-label">地址:</label>
+                    <input type="text" id="Location" name="restaurant[location]" class="form-control" required>
+                    <div class="valid-feedback">
+                        看起來不錯！
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">價位:</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" aria-label="price" id="price"
+                            name="restaurant[avgPrice]" required>
+                        <div class="valid-feedback">
+                            看起來不錯！
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mb-3">
+                    <label for="descript" class="form-label">評論:</label>
+                    <textarea type="text" id="descript" name="restaurant[description]" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="img" class="form-label">新增圖片:</label>
+                    <input type="file" name="image" class="form-control" multiple id="img">
+                </div>
+                <div class="mb-3">
+                    <button class="btn btn-success px-4">新增餐廳</button>
+                </div>
+            </form>
+        </div>
+    </div>
