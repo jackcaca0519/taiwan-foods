@@ -22,7 +22,7 @@ const userRoutes = require('./routes/users');
 
 
 const dbUrl = process.env.DB_URL;
-mongoose.connect(dbUrl, {
+mongoose.connect('mongodb://localhost:27017/recommended-restaurant', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
@@ -57,11 +57,6 @@ const sessionConfig = {
     secret: process.env.secret,
     resave: false,
     saveUninitialized: true,
-    cookie: {
-        httpOnly: true,
-        expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-        maxAge: 1000 * 60 * 60 * 24 * 7
-    }
 };
 app.use(session(sessionConfig));
 app.use(flash());

@@ -4,8 +4,7 @@ module.exports.restaurantSchema = joi.object({
         title: joi.string().required(),
         location: joi.string().required(),
         avgPrice: joi.number().required().min(0),
-        description: joi.string(),
-        //image: joi.string().required(),
+        description: joi.string().required(),
     }).required(),
     deleteImg: joi.array()
 });
