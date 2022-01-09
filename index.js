@@ -22,7 +22,7 @@ const userRoutes = require('./routes/users');
 
 
 const dbUrl = process.env.DB_URL;
-mongoose.connect('mongodb://localhost:27017/recommended-restaurant', {
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
