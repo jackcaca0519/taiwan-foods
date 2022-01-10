@@ -26,7 +26,6 @@ module.exports.newRestaurant = async (req, res) => {
     rest.images = req.files.map(file => ({ url: file.path, filename: file.filename }));
     rest.author = req.user._id;
     await rest.save();
-    console.log(rest);
     req.flash('success', '成功創建新餐廳');
     res.redirect(`/restaurants/${rest._id}`);
 }

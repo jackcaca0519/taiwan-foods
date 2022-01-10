@@ -34,11 +34,14 @@
                 </div>
                 <div class="mb-3">
                     <% rest.images.forEach((img,i)=>{ %>
-                        <img src="<%= img.thumbnail %>" class="img-thumbnail">
-                        <div class="form-check-inline">
-                            <input type="checkbox" id="image-<%= i %>" name="deleteImg[]" value="<%= img.filename %>">
+                        <div>
+                            <img src="<%= img.thumbnail %>" class="img-thumbnail">
+                            <div class="form-check form-check-inline">
+                                <input type="checkbox" id="image-<%= i %>" name="deleteImg[]"
+                                    value="<%= img.filename %>" class="form-check-input">
+                            </div>
+                            <label for="image-<%= i %>" class="form-check-label">刪除</label>
                         </div>
-                        <label for="image-<%= i %>">刪除</label>
                         <% }) %>
                 </div>
                 <div class="mb-3">
