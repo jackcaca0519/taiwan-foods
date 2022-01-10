@@ -1,36 +1,30 @@
 <% layout('layouts/template') %>
     <div id="cluster-map"></div>
-    <h1>Index of Restaurants</h1>
+    <h1>瀏覽各地的餐廳</h1>
     <% for(let rest of restaurants){ %>
         <div class="card mb-3 border-secondary">
-            <div class="row">
-                <div class="col-xl-4">
-                    <% if(rest.images.length){ %>
-                        <img src="<%= rest.images[0].url %>" alt="" class="img-fluid rounded-start">
-                        <% }else{ %>
-                            <img src="http://img.yao51.com/jiankangtuku/awhusrhx.jpeg" alt=""
-                                class="img-fluid rounded-start">
-                            <% } %>
-                </div>
-                <div class="col-xl-8">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <%= rest.title %>
-                        </h5>
-                        <p class="card-text">
-                            <%= rest.description %>
-                        </p>
-                        <p class="card-text">
-                            <small class="text-muted">
-                                <%= rest.location %>
-                            </small>
-                        </p>
-                        <a href="/restaurants/<%= rest.id %> " class="btn btn-secondary card-text">
-                            『<%= rest.title %>』詳細資訊頁面
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <% if(rest.images.length){ %>
+                <img src="<%= rest.images[0].url %>" alt="" class="img-fluid rounded-start card-img-top">
+                <% }else{ %>
+                    <img src="http://img.yao51.com/jiankangtuku/awhusrhx.jpeg" alt=""
+                        class="img-fluid rounded-start card-img-top">
+                    <% } %>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%= rest.title %>
+                            </h5>
+                            <p class="card-text">
+                                <%= rest.description %>
+                            </p>
+                            <p class="card-text">
+                                <small class="text-muted">
+                                    <%= rest.location %>
+                                </small>
+                            </p>
+                            <a href="/restaurants/<%= rest.id %> " class="btn btn-secondary card-text">
+                                『<%= rest.title %>』詳細資訊頁面
+                            </a>
+                        </div>
         </div>
         <% } %>
             <script type="text/javascript">
