@@ -15,14 +15,14 @@
     <div class="cover-container w-100 h-100 py-3 mx-auto d-flex flex-column">
         <header class="mb-auto">
             <h3 class="float-md-start mb-0 float-start me-3">Restaurants</h3>
-            <nav class="nav nav-masthead float-md-end float-start m-0">
-                <a href="#" class="nav-link active homeNav" aria-current="page">Home</a>
-                <a href="/restaurants" class="nav-link homeNav">Restaurants</a>
+            <nav class="nav nav-masthead float-end homeNav m-0">
+                <a href="#" class="nav-link active" aria-current="page">Home</a>
+                <a href="/restaurants" class="nav-link">Restaurants</a>
                 <% if(!user){ %>
-                    <a href="/register" class="nav-link homeNav">Register</a>
-                    <a href="/login" class="nav-link homeNav">Login</a>
+                    <a href="/register" class="nav-link">Register</a>
+                    <a href="/login" class="nav-link">Login</a>
                     <% }else{ %>
-                        <a href="/logout" class="nav-link homeNav">Logout</a>
+                        <a href="/logout" class="nav-link">Logout</a>
                         <% } %>
             </nav>
         </header>

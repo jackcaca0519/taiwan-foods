@@ -28,6 +28,6 @@ body{
 }
 .homeNav{
     @media (max-width: 800px) {
-        display: block;
+        float: left;
     }
 }
