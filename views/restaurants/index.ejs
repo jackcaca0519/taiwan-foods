@@ -21,9 +21,11 @@
                                         <%= rest.location %>
                                     </small>
                                 </p>
-                                <a href="/restaurants/<%= rest.id %> " class="btn btn-secondary card-text">
-                                    『<%= rest.title %>』詳細資訊頁面
-                                </a>
+                                <div class="d-grid gap-2">
+                                    <a href="/restaurants/<%= rest.id %> " class="btn btn-secondary">
+                                        『<%= rest.title %>』詳細資訊頁面
+                                    </a>
+                                </div>
                             </div>
             </div>
             <% } %>
