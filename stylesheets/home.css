@@ -26,3 +26,8 @@ body{
     color: white;
     border-bottom-color: white;
 }
+.homeNav{
+    @media (max-width: 800px) {
+        display: block;
+    }
+}
