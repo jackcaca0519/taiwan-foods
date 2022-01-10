@@ -4,14 +4,14 @@
     <% for(let rest of restaurants){ %>
         <div class="card mb-3">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-lg-4">
                     <% if(rest.images.length){ %>
                         <img src="<%= rest.images[0].url %>" alt="" class="img-fluid">
                         <% }else{ %>
                             <img src="http://img.yao51.com/jiankangtuku/awhusrhx.jpeg" alt="" class="img-fluid">
                             <% } %>
                 </div>
-                <div class="col-md-8">
+                <div class="col-lg-8">
                     <div class="card-body">
                         <h5 class="card-title">
                             <%= rest.title %>
