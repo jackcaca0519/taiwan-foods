@@ -1,8 +1,8 @@
 <% layout('layouts/template') %>
     <div class="row">
-        <h1 class="text-center">Edit Restaurant</h1>
+        <h1 class="text-center">編輯餐廳</h1>
         <div class="col-md-6 offset-md-3">
-            <a href="/restaurants/<%= rest._id%>">Back to restaurant</a>
+            <a href="/restaurants/<%= rest._id%>">返回餐廳頁面</a>
             <form action="/restaurants/<%= rest._id %>?_method=patch" method="post" novalidate class="to-be-validated"
                 enctype="multipart/form-data">
                 <div class="mb-3">
@@ -33,6 +33,7 @@
                     <input type="file" name="image" class="form-control" multiple id="img">
                 </div>
                 <div class="mb-3">
+                    刪除圖片:
                     <% rest.images.forEach((img,i)=>{ %>
                         <div>
                             <img src="<%= img.thumbnail %>" class="img-thumbnail">
