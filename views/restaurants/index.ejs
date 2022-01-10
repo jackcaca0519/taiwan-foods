@@ -5,9 +5,9 @@
         <% for(let rest of restaurants){ %>
             <div class="card mb-3 me-3 border-secondary col-lg-4 p-0">
                 <% if(rest.images.length){ %>
-                    <img src="<%= rest.images[0].url %>" alt="" class="card-img-top">
+                    <img src="<%= rest.images[0].url %>" alt="" class="card-img-top indexImg">
                     <% }else{ %>
-                        <img src="http://img.yao51.com/jiankangtuku/awhusrhx.jpeg" alt="" class="card-img-top">
+                        <img src="http://img.yao51.com/jiankangtuku/awhusrhx.jpeg" alt="" class="card-img-top indexImg">
                         <% } %>
                             <div class="card-body">
                                 <h5 class="card-title">
