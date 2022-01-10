@@ -3,13 +3,12 @@
     <h1>瀏覽各地的餐廳</h1>
     <div class="row">
         <% for(let rest of restaurants){ %>
-            <div class="card mb-3 border-secondary col-md-4">
+            <div class="card mb-3 mr-3 border-secondary col-lg-4">
                 <% if(rest.images.length){ %>
-                    <img src="<%= rest.images[0].url %>" alt=""
-                        class="img-fluid rounded-start card-img-top img-thumbnail">
+                    <img src="<%= rest.images[0].url %>" alt="" class="img-fluid rounded-start card-img-top">
                     <% }else{ %>
                         <img src="http://img.yao51.com/jiankangtuku/awhusrhx.jpeg" alt=""
-                            class="img-fluid rounded-start card-img-top img-thumbnail">
+                            class="img-fluid rounded-start card-img-top">
                         <% } %>
                             <div class="card-body">
                                 <h5 class="card-title">
