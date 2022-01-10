@@ -2,16 +2,17 @@
     <div id="cluster-map"></div>
     <h1>Index of Restaurants</h1>
     <% for(let rest of restaurants){ %>
-        <div class="card mb-3">
+        <div class="card mb-3 border-secondary">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-xl-4">
                     <% if(rest.images.length){ %>
-                        <img src="<%= rest.images[0].url %>" alt="" class="img-fluid">
+                        <img src="<%= rest.images[0].url %>" alt="" class="img-fluid rounded-start">
                         <% }else{ %>
-                            <img src="http://img.yao51.com/jiankangtuku/awhusrhx.jpeg" alt="" class="img-fluid">
+                            <img src="http://img.yao51.com/jiankangtuku/awhusrhx.jpeg" alt=""
+                                class="img-fluid rounded-start">
                             <% } %>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-xl-8">
                     <div class="card-body">
                         <h5 class="card-title">
                             <%= rest.title %>
@@ -24,7 +25,7 @@
                                 <%= rest.location %>
                             </small>
                         </p>
-                        <a href="/restaurants/<%= rest.id %> " class="btn btn-secondary">
+                        <a href="/restaurants/<%= rest.id %> " class="btn btn-secondary card-text">
                             『<%= rest.title %>』詳細資訊頁面
                         </a>
                     </div>
