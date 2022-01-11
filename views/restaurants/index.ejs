@@ -1,7 +1,7 @@
 <% layout('layouts/template') %>
     <div id="cluster-map"></div>
     <h1>瀏覽各地的餐廳</h1>
-    <div class="row mx-1 justify-content-evenly">
+    <div class="row mx-1 justify-content-between">
         <% for(let rest of restaurants){ %>
             <div class="card mb-3 me-3 border-secondary col-lg-3 p-0">
                 <% if(rest.images.length){ %>
