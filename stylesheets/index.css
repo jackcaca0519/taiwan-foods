@@ -1,10 +1,12 @@
 #cluster-map{
     width:100%;
     height: 500px;
+    max-height: 50vh;
 }
 #show-map{
     width:100%;
     height: 300px;
+    max-height: 30vh;
 }
 .indexImg{
 height: 20em;

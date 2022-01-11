@@ -14,15 +14,15 @@
 <body class="d-flex text-center text-white bg-dark">
     <div class="cover-container w-100 h-100 py-3 mx-auto d-flex flex-column">
         <header class="mb-auto">
-            <h3 class="float-md-start mb-0 float-start me-3">Restaurants</h3>
+            <h3 class="float-md-start mb-0 float-start me-3">私藏台灣美食地圖</h3>
             <nav class="nav nav-masthead float-md-end float-start m-0">
-                <a href="#" class="nav-link active" aria-current="page">Home</a>
-                <a href="/restaurants" class="nav-link">Restaurants</a>
+                <a href="#" class="nav-link active" aria-current="page">首頁</a>
+                <a href="/restaurants" class="nav-link">瀏覽餐廳</a>
                 <% if(!user){ %>
-                    <a href="/register" class="nav-link">Register</a>
-                    <a href="/login" class="nav-link">Login</a>
+                    <a href="/register" class="nav-link">註冊</a>
+                    <a href="/login" class="nav-link">登入</a>
                     <% }else{ %>
-                        <a href="/logout" class="nav-link">Logout</a>
+                        <a href="/logout" class="nav-link">登出</a>
                         <% } %>
             </nav>
         </header>
