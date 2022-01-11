@@ -4,31 +4,33 @@
     <div class="row justify-content-between gx-3">
         <% for(let rest of restaurants){ %>
             <div class="card border-secondary p-0 col-lg-4 mb-3">
-                <% if(rest.images.length){ %>
-                    <img src="<%= rest.images[0].url %>" alt="" class="card-img-top indexImg">
-                    <% }else{ %>
-                        <img src="https://res.cloudinary.com/dhcn70fsm/image/upload/v1641906863/%E5%8F%B0%E7%81%A3%E7%BE%8E%E9%A3%9F%E5%9C%B0%E5%9C%96/awhusrhx_hj0w1x.jpg"
-                            alt="" class="card-img-top indexImg">
-                        <% } %>
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <%= rest.title %>
-                                </h5>
-                                <p class="card-text">
-                                    <%= rest.description %>
-                                </p>
-                                <p class="card-text">
-                                    <small class="text-muted">
-                                        <%= rest.location %>
-                                    </small>
-                                </p>
+                <div class="px-1">
+                    <% if(rest.images.length){ %>
+                        <img src="<%= rest.images[0].url %>" alt="" class="card-img-top indexImg">
+                        <% }else{ %>
+                            <img src="https://res.cloudinary.com/dhcn70fsm/image/upload/v1641906863/%E5%8F%B0%E7%81%A3%E7%BE%8E%E9%A3%9F%E5%9C%B0%E5%9C%96/awhusrhx_hj0w1x.jpg"
+                                alt="" class="card-img-top indexImg">
+                            <% } %>
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= rest.title %>
+                                    </h5>
+                                    <p class="card-text">
+                                        <%= rest.description %>
+                                    </p>
+                                    <p class="card-text">
+                                        <small class="text-muted">
+                                            <%= rest.location %>
+                                        </small>
+                                    </p>
 
-                            </div>
-                            <div class="d-grid gap-2 m-1">
-                                <a href="/restaurants/<%= rest.id %> " class="btn btn-secondary">
-                                    『<%= rest.title %>』詳細資訊頁面
-                                </a>
-                            </div>
+                                </div>
+                                <div class="d-grid gap-2 m-1">
+                                    <a href="/restaurants/<%= rest.id %> " class="btn btn-secondary">
+                                        『<%= rest.title %>』詳細資訊頁面
+                                    </a>
+                                </div>
+                </div>
             </div>
             <% } %>
     </div>
