@@ -2,13 +2,14 @@
     <div id="cluster-map"></div>
     <h1>瀏覽各地的餐廳</h1>
     <div class="grid">
+        <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+        <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+        <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
+    </div>
+    <div class="grid">
         <% for(let rest of restaurants){ %>
             <div class="card border-secondary p-0 g-col-lg-4 mb-3">
-                <div class="grid">
-                    <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
-                    <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
-                    <div class="g-col-6 g-col-md-4">.g-col-6 .g-col-md-4</div>
-                </div>
+
                 <% if(rest.images.length){ %>
                     <img src="<%= rest.images[0].url %>" alt="" class="card-img-top indexImg">
                     <% }else{ %>
