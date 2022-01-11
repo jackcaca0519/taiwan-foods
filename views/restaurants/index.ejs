@@ -1,10 +1,10 @@
 <% layout('layouts/template') %>
     <div id="cluster-map"></div>
     <h1>瀏覽各地的餐廳</h1>
-    <div class="row justify-content-between gx-3">
+    <div class="row row-cols-lg-3 g-4">
         <% for(let rest of restaurants){ %>
-            <div class="card border-secondary p-0 col-lg-4 mb-3">
-                <div class="px-1">
+            <div class="col mb-3">
+                <div class="card border-secondary p-0 h-100">
                     <% if(rest.images.length){ %>
                         <img src="<%= rest.images[0].url %>" alt="" class="card-img-top indexImg">
                         <% }else{ %>
@@ -25,12 +25,10 @@
                                     </p>
 
                                 </div>
-                                <div class="d-flex">
-                                    <div class="d-grid gap-2 m-1 mt-auto ">
-                                        <a href="/restaurants/<%= rest.id %> " class="btn btn-secondary">
-                                            『<%= rest.title %>』詳細資訊頁面
-                                        </a>
-                                    </div>
+                                <div class="d-grid gap-2 m-1 ">
+                                    <a href="/restaurants/<%= rest.id %> " class="btn btn-secondary">
+                                        『<%= rest.title %>』詳細資訊頁面
+                                    </a>
                                 </div>
                 </div>
             </div>
