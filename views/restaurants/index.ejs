@@ -4,7 +4,7 @@
     <div class="row justify-content-between gx-3">
         <% for(let rest of restaurants){ %>
             <div class="card border-secondary p-0 col-lg-4 mb-3">
-                <div class="px-1 col">
+                <div class="px-1 d-flex col">
                     <% if(rest.images.length){ %>
                         <img src="<%= rest.images[0].url %>" alt="" class="card-img-top indexImg">
                         <% }else{ %>
