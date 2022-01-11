@@ -3,7 +3,7 @@
     <h1>瀏覽各地的餐廳</h1>
     <div class="row mx-1 justify-content-between">
         <% for(let rest of restaurants){ %>
-            <div class="card mb-3 me-3 border-secondary col-lg-3 p-0">
+            <div class="card mb-3 border-secondary col-lg-4 p-0">
                 <% if(rest.images.length){ %>
                     <img src="<%= rest.images[0].url %>" alt="" class="card-img-top indexImg">
                     <% }else{ %>
