@@ -3,7 +3,8 @@
     <div class="row">
         <h1 class="text-center">新增餐廳</h1>
         <div class="col-md-6 offset-md-3">
-            <form action="/restaurants" method="post" novalidate class="to-be-validated" enctype="multipart/form-data">
+            <form action="/restaurants" method="post" novalidate class="to-be-validated" enctype="multipart/form-data"
+                id="newRest">
                 <div class="mb-3">
                     <label for="title" class="form-label">餐廳名:</label>
                     <input type="text" id="title" name='restaurant[title]' class="form-control" required>
@@ -40,7 +41,7 @@
                     <input type="file" name="image" class="form-control" multiple id="img">
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-success px-4" id="newRest">新增餐廳</button>
+                    <button class="btn btn-success px-4">新增餐廳</button>
                 </div>
             </form>
         </div>
@@ -48,7 +49,7 @@
 
     <script>
         const newRest = document.querySelector('#newRest');
-        newRest.addEventListener('click', () => {
+        newRest.addEventListener('submit', () => {
             const savingAlert = document.querySelector('#savingAlert');
             savingAlert.classList.remove("invisible");
             savingAlert.innerHTML = '<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg><div class="text-center">創建餐廳中。。。請物跳出頁面。。。</div>'
