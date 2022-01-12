@@ -68,7 +68,7 @@ module.exports.editRestaurant = async (req, res) => {
 }
 
 module.exports.delete = async (req, res) => {
-    const yes = confirm("確定刪除？");
+    const yes = alert("確定刪除？");
     if (yes) {
         await Restaurant.findByIdAndDelete(req.params.id);
         req.flash('fail', '成功刪除餐廳');
