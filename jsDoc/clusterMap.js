@@ -1,4 +1,5 @@
 mapboxgl.accessToken = mapToken;
+const restaurants = JSON.parse(Rests);
 
 const map = new mapboxgl.Map({
     container: 'cluster-map',
