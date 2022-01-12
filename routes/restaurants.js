@@ -21,6 +21,4 @@ router.patch('/:id', isLogin, upload.array('image'), isAuthor, validateRestauran
 //Delete Specify Restaurant
 router.delete('/:id', isLogin, isAuthor, catchAsync(restaurants.delete))
 
-router.get('/saving', catchAsync(saving))
-
 module.exports = router;

@@ -39,8 +39,15 @@
                     <input type="file" name="image" class="form-control" multiple id="img">
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-success px-4">新增餐廳</button>
+                    <button class="btn btn-success px-4" id="newRest">新增餐廳</button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script>
+        const newRest = document.querySelector('#newRest');
+        newRest.addEventListener('click', () => {
+            alert('創建餐廳中。。。請物跳出頁面。。。');
+        })
+    </script>
