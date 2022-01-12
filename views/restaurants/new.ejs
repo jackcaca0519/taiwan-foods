@@ -1,5 +1,4 @@
 <% layout('layouts/template') %>
-    <div class="alert alert-warning d-flex align-items-center invisible" role="alert" id="savingAlert"></div>
     <div class="row">
         <h1 class="text-center">新增餐廳</h1>
         <div class="col-md-6 offset-md-3">
@@ -41,11 +40,12 @@
                     <input type="file" name="image" class="form-control" multiple id="img">
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-success px-4">新增餐廳</button>
+                    <button class="btn btn-success px-4" id="newRestButton">新增餐廳</button>
                 </div>
             </form>
         </div>
     </div>
+    <div class="alert alert-warning d-flex align-items-center invisible" role="alert" id="savingAlert"></div>
 
     <script>
         const newRest = document.querySelector('#newRest');
@@ -53,6 +53,7 @@
             newRest.addEventListener('submit', () => {
                 const savingAlert = document.querySelector('#savingAlert');
                 savingAlert.classList.remove("invisible");
+                document.querySelector('#newRestButton').disabled = true;
                 savingAlert.innerHTML = '<div>&#9888;創建餐廳中。。。請勿跳出頁面。。。</div>'
             })
 
