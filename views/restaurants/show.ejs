@@ -43,7 +43,8 @@
                 <% if(user&&rest.author._id.equals(user._id)){ %>
                     <div class="card-body">
                         <a href="/restaurants/<%= rest._id %>/edit" class="card-link btn btn-warning">編輯餐廳</a>
-                        <form class="d-inline" action="/restaurants/<%= rest._id %>?_method=delete" method="POST">
+                        <form class="d-inline" action="/restaurants/<%= rest._id %>?_method=delete" method="POST"
+                            id="deleteRest">
                             <button class="card-link btn btn-danger">刪除餐廳</button>
                         </form>
                     </div>
@@ -114,6 +115,12 @@
     <script type="text/javascript">
         const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
         const rest = '<%- JSON.stringify(rest) %>';
+        const deleteRest = document.querySelector('#deleteRest');
+        deleteRest.addEventListener('submit', (event) => {
+            const yes = confirm("確定刪除？");
+            if (!yes)
+                event.preventDefault();
+        })
     </script>
 
     <script src="/showpageMap.js"></script>
