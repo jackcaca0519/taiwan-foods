@@ -53,6 +53,11 @@ resSchema.post('findOneAndDelete', async function (rest) {
             }
         });
     }
+    if (rest.images) {
+        for (img of rest.images) {
+            await cloudinary.uploader.destroy(img.filename)
+        }
+    }
 })
 
 module.exports = mongoose.model('Restaurant', resSchema);

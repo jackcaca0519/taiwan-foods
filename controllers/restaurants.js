@@ -54,6 +54,11 @@ module.exports.editPage = async (req, res) => {
 module.exports.editRestaurant = async (req, res) => {
     const { id } = req.params;
     const rest = await Restaurant.findByIdAndUpdate(id, { ...req.body.restaurant });
+    const geodata = await geocoder.forwardGeocode({
+        query: req.body.restaurant.location,
+        limit: 1
+    }).send();
+    rest.geometry = geodata.body.features[0].geometry;
     const imgs = req.files.map(file => ({ url: file.path, filename: file.filename }));
     rest.images.push(...imgs);
     await rest.save();
