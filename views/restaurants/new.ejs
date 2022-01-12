@@ -49,9 +49,9 @@
 
     <script>
         const newRest = document.querySelector('#newRest');
-        newRest.addEventListener('submit', () => {
+        newRest.addEventListener('change', () => {
             const savingAlert = document.querySelector('#savingAlert');
             savingAlert.classList.remove("invisible");
-            savingAlert.innerHTML = '<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg><div class="text-center">創建餐廳中。。。請物跳出頁面。。。</div>'
+            savingAlert.innerHTML = '<div>&#9888;創建餐廳中。。。請物跳出頁面。。。</div>'
         })
     </script>
