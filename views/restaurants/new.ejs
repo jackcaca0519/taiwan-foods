@@ -49,7 +49,7 @@
 
     <script>
         const newRest = document.querySelector('#newRest');
-        newRest.addEventListener('change', () => {
+        newRest.addEventListener('change' && 'submit', () => {
             const savingAlert = document.querySelector('#savingAlert');
             savingAlert.classList.remove("invisible");
             savingAlert.innerHTML = '<div>&#9888;創建餐廳中。。。請物跳出頁面。。。</div>'
