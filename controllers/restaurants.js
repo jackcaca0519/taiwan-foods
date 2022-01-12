@@ -25,6 +25,7 @@ module.exports.newRestaurant = async (req, res) => {
     rest.geometry = geodata.body.features[0].geometry;
     rest.images = req.files.map(file => ({ url: file.path, filename: file.filename }));
     rest.author = req.user._id;
+    req.flash('warning', '等待創建餐廳。。。請勿跳轉頁面。。。');
     await rest.save();
     req.flash('success', '成功創建新餐廳');
     res.redirect(`/restaurants/${rest._id}`);
