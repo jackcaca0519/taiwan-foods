@@ -11,13 +11,6 @@ module.exports.index = async (req, res) => {
     res.render('restaurants/index', { restaurants });
 }
 
-module.exports.saving = (req, res) => {
-    res.render('restaurants/saving');
-    await rest.save();
-    req.flash('success', '成功創建新餐廳');
-    res.redirect(`/restaurants/${rest._id}`);
-}
-
 module.exports.newFormPage = (req, res) => {
     res.render('restaurants/new');
 }
@@ -79,3 +72,9 @@ module.exports.delete = async (req, res) => {
     res.redirect('/restaurants');
 }
 
+module.exports.saving = async (req, res) => {
+    res.render('restaurants/saving');
+    await rest.save();
+    req.flash('success', '成功創建新餐廳');
+    res.redirect(`/restaurants/${rest._id}`);
+}
