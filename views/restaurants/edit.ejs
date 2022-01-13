@@ -46,8 +46,21 @@
                         <% }) %>
                 </div>
                 <div class="mb-3">
-                    <button class="btn btn-info px-4">save</button>
+                    <button class="btn btn-info px-4">更新餐廳</button>
                 </div>
             </form>
+            <div class="alert alert-warning d-flex align-items-center invisible" role="alert" id="savingAlert"></div>
         </div>
     </div>
+
+    <script>
+        const newRest = document.querySelector('#newRest');
+        newRest.addEventListener('change', () => {
+            newRest.addEventListener('submit', () => {
+                const savingAlert = document.querySelector('#savingAlert');
+                savingAlert.classList.remove("invisible");
+                document.querySelector('#newRestButton').disabled = true;
+                savingAlert.innerHTML = '<div>&#9888;更新餐廳中。。。請勿跳出頁面。。。</div>'
+            })
+        })
+    </script>
